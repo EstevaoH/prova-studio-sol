@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/display.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/fonts.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/color.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+<section>
+    <header>
+        <h1 class="display_titulo">
+            QUAL É O NÚMERO?
+            <hr>
+        </h1>
+    </header>
+</section>
+
+<section>
+    <div id="display_mensagem_resultado"></div>
+
+    <div id="display_mensagem_dica" class=""></div>
+
+    <div class="numero_digital">  
+        <span class="segmento_um">
+            <svg width="69" height="15" viewBox="0 0 69 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.269 14.8295H54.5517L68.4885 1.59469C67.1985 0.597611 65.5846 3.8147e-06 63.8301 3.8147e-06H4.63794C2.89411 3.8147e-06 1.29303 0.589093 0.00726318 1.57233L14.269 14.8295Z" fill="#262A34"/>
+                </svg>
+        </span>
+        <span class="segmento_dois"><svg width="17" height="65" viewBox="0 0 17 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.624405 14.2662V55.4704L12.2954 64.2173C14.77 62.9539 16.4669 60.3866 16.4669 57.4177V5.62484C16.4669 3.80751 15.8299 2.14251 14.7721 0.832241L0.624405 14.2662Z" fill="#262A34"/>
+            </svg>
+        </span>
+        <span class="segmento_tres">
+            <svg width="17" height="65" viewBox="0 0 17 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.624405 14.2662V55.4704L12.2954 64.2173C14.77 62.9539 16.4669 60.3866 16.4669 57.4177V5.62484C16.4669 3.80751 15.8299 2.14251 14.7721 0.832241L0.624405 14.2662Z" fill="#262A34"/>
+                </svg>
+        </span>
+        <span class="segmento_quatro"><svg width="69" height="15" viewBox="0 0 69 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.269 0.169458H54.5517L68.4885 13.4053C67.1985 14.4003 65.5846 15 63.8301 15H4.63793C2.8941 15 1.29302 14.4088 0.00725555 13.4256L14.269 0.169458Z" fill="#262A34"/>
+            </svg>
+        </span>
+        <span class="segmento_seis"><svg width="16" height="65" viewBox="0 0 16 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.71614 0.815502C0.644493 2.1311 0 3.80888 0 5.63687V57.4298C0 60.3986 1.69695 62.9659 4.17155 64.2293L15.8425 55.4825V13.947L1.71614 0.815502Z" fill="#262A34"/>
+            </svg>
+        </span>
+        <!-- <span class="segmento_seis"><svg></svg></span>
+        <span class="segmento_sete"><svg></svg></span> -->
+    </div>
+
+    <div id="nova_partida"></div>
+
+
+</section>
+
+<section>
+    <form id="formulario">
+        <input class="display_input" max="300" min="0" id="url_valor" type="number" placeholder="Digite o palpite">
+        <button onclick="compararNumero()" class="display_button" type="submit">ENVIAR</button>
+    </form>
+    <div id="resposta"></div>
+    <div id="resposta_error" style="color: red;"></div>
+</section>
+    
+<script type="text/javascript" src="../js/request.js"></script>
+    
+</body>
+</html>
