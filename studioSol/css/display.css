@@ -52,16 +52,19 @@ section {
 .segmento_tres {
   position: absolute;
   right: 20px;
-  top: 8px;
+  bottom: 0px;
 }
 
 .segmento_quatro {
   position: absolute;
-  bottom: 0px;
-  margin: 5px;
+  bottom: -4px;
+  /* margin: 5px; */
+  left: 6px;
 }
 
 .segmento_cinco {
+  position: absolute;
+  bottom: 0px;
 }
 
 .segmento_seis {
@@ -70,6 +73,10 @@ section {
 }
 
 .segmento_sete {
+  position: absolute;
+  top: 63px;
+  margin: 5px;
+  /* left: 12px; */
 }
 
 .display_input {
@@ -108,4 +115,9 @@ section {
   height: 42px;
   font-weight: bold;
   font-size: 12px;
+}
+
+.display_digital {
+  display: flex;
+  justify-content: center;
 }
