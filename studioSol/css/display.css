@@ -7,6 +7,10 @@ section {
   justify-content: center;
 }
 
+hr {
+  color: #cfcfcf;
+}
+
 .display_digital {
   display: flex;
 }
@@ -80,7 +84,6 @@ section {
 .segmento_quatro {
   position: absolute;
   bottom: -4px;
-  /* margin: 5px; */
   left: 6px;
 }
 
@@ -98,7 +101,6 @@ section {
   position: absolute;
   top: 63px;
   margin: 5px;
-  /* left: 12px; */
 }
 
 .display_input {
@@ -108,6 +110,7 @@ section {
   border-radius: 4px;
   width: 217px;
   height: 42px;
+  position: relative;
 }
 .display_button {
   color: #ffffff;
@@ -139,7 +142,15 @@ section {
   font-size: 12px;
 }
 
+.novaPartida {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
 .display_digital {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }

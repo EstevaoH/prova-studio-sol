@@ -24,21 +24,18 @@
 
     <section>
         <div id="display_mensagem_resultado" class="display_texto_acerto"></div>
-
         <div id="display_mensagem_dica" class="texto_dica"></div>
-
         <div id="display" class="display_digital"></div>
-
-
-        <div id="nova_partida"></div>
-
-
+        <div id="nova_partida" class="novaPartida"></div>
     </section>
 
     <section>
         <form id="formulario">
-            <input class="display_input" max="300" min="0" id="url_valor" type="number" placeholder="Digite o palpite">
-            <button onclick="iniciarEvento()" id="button_comparar" class="display_button" type="submit">ENVIAR</button>
+            <input class="display_input" max="300" min="0" id="url_valor" type="number"
+                placeholder="Digite o palpite" />
+            <button id="button_comparar" class="display_button" type="submit">
+                ENVIAR
+            </button>
         </form>
         <div id="resposta"></div>
     </section>
