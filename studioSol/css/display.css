@@ -7,6 +7,10 @@ section {
   justify-content: center;
 }
 
+.display_digital {
+  display: flex;
+}
+
 .display_titulo {
   color: var(--color-primary);
 
@@ -18,6 +22,7 @@ section {
 
 .display_texto_acerto {
   color: var(--color-text-success);
+  text-align: center;
 }
 .display_texto_erro {
   color: var(--color-text-error);
@@ -25,6 +30,7 @@ section {
 
 .texto_dica {
   color: var(--color-primary);
+  text-align: center;
 }
 
 .mensagem_dica {

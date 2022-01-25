@@ -29,12 +29,12 @@ function numeroAleatorio() {
             console.log("Error padrao", err);
             this.error = err;
             this.numeroErro = this.error.toString();
-            numeroSeparado = this.numeroErro.split('');
+            numero_separado = this.numeroErro.split("");
             const display = document.getElementById("display");
             let cor = "vermelhor";
-            let numero_do_display = '';
+            let numero_do_display = "";
 
-            numeroSeparado.forEach(numero => {
+            numero_separado.forEach(numero => {
                 numero_do_display += pegaNumeroDigital(numero, cor);
             })
             display.innerHTML = numero_do_display;
@@ -46,35 +46,35 @@ function numeroAleatorio() {
 }
 numeroAleatorio();
 
-function compararNumero() {
-    let numeroDigitado;
+function iniciarEvento() {
+    let numero_digitado;
 
     const formulario_display = document.getElementById("formulario");
     formulario_display.addEventListener("submit", (e) => {
         e.preventDefault();
-        numeroDigitado = e.target.querySelector("input").value;
+        numero_digitado = e.target.querySelector("input").value;
 
-        numeroSeparado = numeroDigitado.split('');
+        numero_separado = numero_digitado.split("");
 
         const display = document.getElementById("display");
 
-        const numeroCorreto = this.numeroAPI.toString();
-        console.log(numeroSeparado);
+        const numero_correto = this.numeroAPI.toString();
+        console.log(numero_separado);
 
         let cor = "preto";
 
-        if (numeroDigitado === numeroCorreto) {
+        if (numero_digitado === numero_correto) {
             cor = "verde";
         }
-        let numero_do_display = '';
+        let numero_do_display = "";
 
-        numeroSeparado.forEach(numero => {
+        numero_separado.forEach(numero => {
             numero_do_display += pegaNumeroDigital(numero, cor);
         })
 
         display.innerHTML = numero_do_display;
 
-        if (numeroDigitado == this.numeroAPI.toString()) {
+        if (numero_digitado == this.numeroAPI.toString()) {
             console.log("numeros iguais");
             document.getElementById("display_mensagem_resultado").innerHTML = `<span id="display_texto_acertou" class="display_texto_acerto">Você acertou!!!</span>`;
 
@@ -95,14 +95,14 @@ function compararNumero() {
 
             e.target.querySelector("input").value = "";
 
-        } else if (numeroDigitado > this.numeroAPI.toString()) {
-            console.log(`numeor digitado ${numeroDigitado} é maior quer ${this.numeroAPI.toString()}`);
+        } else if (numero_digitado > this.numeroAPI.toString()) {
+            console.log(`numero digitado ${numero_digitado} é maior quer ${this.numeroAPI.toString()}`);
             document.getElementById("display_mensagem_dica").innerHTML = `<span class="texto_dica">É menor</span>`;
 
             e.target.querySelector("input").value = "";
 
-        } else if (numeroDigitado < this.numeroAPI.toString()) {
-            console.log(`numeor digitado ${numeroDigitado} é menor quer ${this.numeroAPI.toString()}`);
+        } else if (numero_digitado < this.numeroAPI.toString()) {
+            console.log(`numero digitado ${numero_digitado} é menor quer ${this.numeroAPI.toString()}`);
             document.getElementById("display_mensagem_dica").innerHTML = `<span class="texto_dica">É maior</span>`;
 
             e.target.querySelector("input").value = "";
@@ -165,79 +165,79 @@ function pegaHTMLNumeroDigital(segmentos) {
 }
 
 function pegaNumeroDigital(numero, cor) {
-    let numero_do_display = '';
+    let numero_do_display = "";
 
     switch (numero) {
-        case '1':
+        case "1":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
-                    um: 'cinza',
+                    um: "cinza",
                     dois: cor,
                     tres: cor,
-                    quatro: 'cinza',
-                    cinco: 'cinza',
-                    seis: 'cinza',
-                    sete: 'cinza',
+                    quatro: "cinza",
+                    cinco: "cinza",
+                    seis: "cinza",
+                    sete: "cinza",
                 }
             );
             break;
-        case '2':
+        case "2":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
                     um: cor,
                     dois: cor,
-                    tres: 'cinza',
+                    tres: "cinza",
                     quatro: cor,
                     cinco: cor,
-                    seis: 'cinza',
+                    seis: "cinza",
                     sete: cor,
                 }
             );
             break;
-        case '3':
+        case "3":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
                     um: cor,
                     dois: cor,
                     tres: cor,
                     quatro: cor,
-                    cinco: 'cinza',
-                    seis: 'cinza',
+                    cinco: "cinza",
+                    seis: "cinza",
                     sete: cor,
                 }
             );
             break;
-        case '4':
+        case "4":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
-                    um: 'cinza',
+                    um: "cinza",
                     dois: cor,
                     tres: cor,
-                    quatro: 'cinza',
-                    cinco: 'cinza',
+                    quatro: "cinza",
+                    cinco: "cinza",
                     seis: cor,
                     sete: cor
                 }
             );
             break;
-        case '5':
+        case "5":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
                     um: cor,
-                    dois: 'cinza',
+                    dois: "cinza",
                     tres: cor,
                     quatro: cor,
-                    cinco: 'cinza',
+                    cinco: "cinza",
                     seis: cor,
                     sete: cor,
                 }
             );
             break;
-        case '6':
+        case "6":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
                     um: cor,
-                    dois: 'cinza',
+                    dois: "cinza",
                     tres: cor,
                     quatro: cor,
                     cinco: cor,
@@ -246,20 +246,20 @@ function pegaNumeroDigital(numero, cor) {
                 }
             );
             break;
-        case '7':
+        case "7":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
                     um: cor,
                     dois: cor,
                     tres: cor,
-                    quatro: 'cinza',
-                    cinco: 'cinza',
-                    seis: 'cinza',
-                    sete: 'cinza',
+                    quatro: "cinza",
+                    cinco: "cinza",
+                    seis: "cinza",
+                    sete: "cinza",
                 }
             );
             break;
-        case '8':
+        case "8":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
                     um: cor,
@@ -272,14 +272,14 @@ function pegaNumeroDigital(numero, cor) {
                 }
             );
             break;
-        case '9':
+        case "9":
             numero_do_display = pegaHTMLNumeroDigital(
                 {
                     um: cor,
                     dois: cor,
                     tres: cor,
                     quatro: cor,
-                    cinco: 'cinza',
+                    cinco: "cinza",
                     seis: cor,
                     sete: cor,
                 }
@@ -295,7 +295,7 @@ function pegaNumeroDigital(numero, cor) {
                     quatro: cor,
                     cinco: cor,
                     seis: cor,
-                    sete: 'cinza',
+                    sete: "cinza",
                 }
             );
             break;
@@ -307,12 +307,12 @@ function pegaNumeroDigital(numero, cor) {
 // document.getElementById("gera_numero").addEventListener("click", () => {
 //     const display = document.getElementById("display");
 
-//     const numeroCorreto = 120;
+//     const numero_correto = 120;
 //     const palpite = 120;
 
 //     let cor = "preto";
 
-//     if (palpite === numeroCorreto) {
+//     if (palpite === numero_correto) {
 //         cor = "verde";
 //     }
 
